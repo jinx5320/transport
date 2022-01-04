@@ -1,0 +1,48 @@
+﻿<%@ Master Language="VB" CodeFile="Buyer.master.vb" Inherits="Buyer" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="mighty.css" rel="Stylesheet" type="text/css" />    
+    <style type="text/css">
+        .style1
+        {
+            height: 19px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%">
+    <tr><td valign="top" colspan="2"><img src="logo.JPG" alt="Mighty Business" width="451" height="80" /></td></tr>
+    <tr>
+        <td colspan="2" align="right" bgcolor="#20C82D" >
+        <table>
+        <tr>
+            <td><asp:HyperLink ID="linkhome" runat="server" Text="Home" Font-Bold="true" ForeColor="White" NavigateUrl="~/home.aspx" /></td>
+            <td><asp:HyperLink ID="logout" runat="server" Text="LogOut" Font-Bold="true" ForeColor="White" NavigateUrl="~/Buyerlogin.aspx"/></td>
+        </tr>
+        </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign ="top" width="20%">
+        <table bgcolor="#E3366B" style="height: 252px">
+        <tr><td><b>Purchase Orders</b></td></tr>
+        <tr><td><asp:LinkButton ID="lnkcompose" Text="Compose" runat="server" Font-Bold="True" ForeColor="White"/></td></tr>
+        <tr><td><asp:LinkButton ID="Linkmodify" Text="Responses" runat="server" Font-Bold="True" ForeColor="White"/></td></tr>
+        <tr><td><b>Messages</b></td></tr>
+        <tr><td><asp:LinkButton ID="LinkButton8" Text="Inbox" runat="server" Font-Bold="True" ForeColor="White"/></td></tr>
+        <tr><td><asp:LinkButton ID="LinkButton9" Text="Compose" runat="server" Font-Bold="True" ForeColor="White"/></td></tr>
+        <tr><td><asp:LinkButton ID="LinkButton1" Text="Modify My details" runat="server" Font-Bold="True" ForeColor="White"/></td></tr>
+        <tr><td class="style1"><asp:LinkButton ID="LinkButton2" Text="Search By Product" runat="server" Font-Bold="True" ForeColor="White"/></td></tr>            
+        </table>
+        </td>
+        <td width="80%" valign="top"><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder></td>
+   </tr>
+   </table>
+    </form>
+</body>
+</html>

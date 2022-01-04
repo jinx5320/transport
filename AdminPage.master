@@ -1,0 +1,56 @@
+﻿<%@ Master Language="VB" CodeFile="AdminPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="mighty.css" rel="Stylesheet" type="text/css" />  
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%">
+    <tr><td valign="top"><img src="logo.JPG" alt="Mighty Business" width="451" height="80" /></td></tr>
+    <tr><td width="1px" bgcolor="#E3366B"></td></tr>
+    <tr>
+        <td>
+        <asp:Menu ID="menu1" runat="server" Orientation="Horizontal" BackColor="#E3366B" height="20px"
+        ForeColor="white" Font-Bold="true" Font-Size="16px" width="100%">
+        <DynamicMenuItemStyle BackColor="#20C82D" ForeColor="#E3366B" Width="130px"></DynamicMenuItemStyle>
+        <Items>
+        <asp:MenuItem Text="Home" NavigateUrl="~/adminhome.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="Change Password" NavigateUrl="~/adminchangepwd.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="Launch Category" NavigateUrl="~/launchcategory.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="Acceptance">
+                <asp:MenuItem Text="Supplier" NavigateUrl="~/SupplierAcceptance.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Buyer" NavigateUrl="~/buyeraccept.aspx"></asp:MenuItem>
+            </asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="View Details">
+                <asp:MenuItem Text="Supplier List" NavigateUrl="~/SuppliersList.aspx?id=suppliers"></asp:MenuItem>
+                <asp:MenuItem Text="Buyer List" NavigateUrl="~/Buyerlist.aspx?id=buyers"></asp:MenuItem>
+            </asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="Cancelation">
+                <asp:MenuItem Text="Supplier" NavigateUrl="~/cancelsupp.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Buyer" NavigateUrl="~/cancelbuyer.aspx"></asp:MenuItem>
+            </asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="Inbox" NavigateUrl="~/admininbox.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="Compose" NavigateUrl="~/admincompose.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="LogOut" NavigateUrl="~/adminlogin.aspx"></asp:MenuItem>
+        </Items>
+        </asp:Menu></td>
+    </tr>
+    <tr><td width="1px" bgcolor="#E3366B"></td></tr>
+    <tr><td><asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder></td></tr>
+    <tr><td align="center" valign="bottom" style="background-color: #3399FF;font-weight:bold;">All ©Copy rights Reserved.@Mighty Business</td></tr>
+    </table>    
+    </form>
+</body>
+</html>

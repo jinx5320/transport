@@ -1,0 +1,52 @@
+﻿<%@ Master Language="VB" CodeFile="HomePage.master.vb" Inherits="HomePage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="mighty.css" rel="Stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%">
+    <tr><td valign="top"><img src="logo.JPG" alt="Mighty Business" width="451" height="80" /></td></tr>
+    <tr><td width="1px" bgcolor="#E3366B"></td></tr>
+    <tr>
+        <td>
+        <asp:Menu ID="menu1" runat="server" Orientation="Horizontal" BackColor="#E3366B" height="20px"
+        ForeColor="white" Font-Bold="true" Font-Size="16px" width="100%">
+        <DynamicMenuItemStyle BackColor="#20C82D" ForeColor="#E3366B" Width="120px"></DynamicMenuItemStyle>
+        <Items>
+            <asp:MenuItem Text="Home" NavigateUrl="~/home.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="Admin" NavigateUrl="~/adminlogin.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="Registration">
+                <asp:MenuItem Text="Supplier" NavigateUrl="~/Supplier registration.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Buyer" NavigateUrl="~/Buyer Registartion.aspx"></asp:MenuItem>
+            </asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="Login">
+                <asp:MenuItem Text="Supplier" NavigateUrl="~/Supplierlogin.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Buyer" NavigateUrl="~/Buyerlogin.aspx"></asp:MenuItem>
+            </asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="Search">
+                <asp:MenuItem Text="By Category" NavigateUrl="~/searchcategory.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="By Products" NavigateUrl="~/searchproduct.aspx"></asp:MenuItem>
+            </asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="About Us" NavigateUrl="~/aboutus.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="||"></asp:MenuItem>
+            <asp:MenuItem Text="Contact Us" NavigateUrl="~/contactus.aspx"></asp:MenuItem>
+        </Items>
+        </asp:Menu></td>
+    </tr>
+    <tr><td width="1px" bgcolor="#E3366B"></td></tr>
+    <tr><td><asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder></td></tr>
+    <tr><td align="center" valign="bottom" style="background-color: #3399FF;font-weight:bold;">All ©Copy rights Reserved.@Mighty Business</td></tr>
+    </table>        
+    </form>
+</body>
+</html>
